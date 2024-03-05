@@ -2,10 +2,11 @@
 import { useState } from "react";
 import backgroundImage from "./images/mymind-XUlsF9LYeVk-unsplash.jpg"; // Import your background image
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Intro from "./components/Intro";
-import CourseList from "./components/CourseList";
-import About from "./components/About";
+// import Navbar from "./components/Navbar";
+// import Intro from "./components/Intro";
+// import CourseList from "./components/CourseList";
+// import About from "./components/About";
+import CourseDetails from "./components/CourseDetails";
 
 const courses = [
   { id: 1, name: "Python", level: "Intermediate", category: "Offered" },
@@ -17,7 +18,17 @@ const courses = [
   { id: 7, name: "Express.js", level: "Advanced", category: "Upcoming" },
   { id: 8, name: "Bootstrap", level: "Intermediate", category: "Upcoming" },
 ];
-
+const course = {
+  id: 1,
+  name: "Python",
+  level: "Intermediate",
+  description: "Learn Python programming language.",
+  duration: "6 weeks",
+  prerequisites: "Basic programming knowledge",
+  instructor: "John Doe",
+  format: "Online",
+  certification: "Yes"
+};
 function App() {
   const [count, setCount] = useState(0);
 
@@ -32,16 +43,8 @@ function App() {
         fontFamily: "Poppins, sans-serif", // Apply font family if needed
       }}
     >
-      <Navbar />
-      <Intro />
-      <CourseList courses={courses} />
-      {/* Type '{ id: number; name: string; level: string; category: string; }[]' is not assignable to type 'Course[]'.
-  Type '{ id: number; name: string; level: string; category: string; }' is not assignable to type 'Course'.
-    Types of property 'category' are incompatible.
-      Type 'string' is not assignable to type '"Offered" | "Upcoming"'.ts(2322)
-CourseList.tsx(12, 3): The expected type comes from property 'courses' which is declared here on type 'IntrinsicAttributes & Props'
-(property) Props.courses: Course[] */}
-      <About />
+      <CourseDetails course={course}></CourseDetails> 
+      {/* pass an example parameter */}
     </div>
   );
 }
