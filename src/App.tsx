@@ -8,8 +8,11 @@ import CourseList from './components/CourseList'
 
 const courses = [
   { id: 1, name: 'Course 1', category: 'Offered' as const },
-  { id: 2, name: 'Course 2', category: 'Upcoming' as const },
   { id: 3, name: 'Course 3', category: 'Offered' as const },
+  { id: 4, name: 'Course 4', category: 'Offered' as const },
+  { id: 2, name: 'Course 2', category: 'Upcoming' as const },
+  { id: 5, name: 'Course 5', category: 'Upcoming' as const },
+  { id: 6, name: 'Course 6', category: 'Upcoming' as const },
   // Add more courses as needed
 ];
 
