@@ -42,7 +42,7 @@ const CourseList: React.FC<Props> = ({ courses }) => {
         </div>
       </div>
         <h5 className="card-title mb-3 text-start">Upcoming Courses</h5>
-      <div className="card mt-4">
+      <div className="card mt-3 mb-3">
         <div
           className="card-body"
           style={{ maxHeight: "150px", overflowY: "auto" }}

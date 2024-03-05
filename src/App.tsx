@@ -5,6 +5,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Intro from './components/Intro'
 import CourseList from './components/CourseList'
+import About from './components/About'
 
 const courses = [
   { id: 1, name: 'Course 1', category: 'Offered' as const },
@@ -24,6 +25,7 @@ function App() {
     <Navbar></Navbar>
     <Intro></Intro>
     <CourseList courses={courses} />
+    <About></About>
     </>
   )
 }
