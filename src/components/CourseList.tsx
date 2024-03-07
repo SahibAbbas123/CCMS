@@ -1,18 +1,24 @@
 //CourseList.tsx
 import React from "react";
 
-interface Course {
+export interface Course {
   id: number;
   name: string;
+  description: string;
   level: string; // Add level property to the Course interface
   category: "Offered" | "Upcoming";
+  duration: string;
+  prerequisites: string;
+  instructor: string;
+  certification: string;
+
 }
 
 interface Props {
   courses: Course[];
 }
 
-const CourseList: React.FC<Props> = ({ courses }) => {
+const CourseList = ({ courses }) => {
   // Filter courses by category
   const offeredCourses = courses.filter(
     (course) => course.category === "Offered"
