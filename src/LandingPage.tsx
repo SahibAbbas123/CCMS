@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import { useState } from "react";
 
-// import backgroundImage from "./images/mymind-XUlsF9LYeVk-unsplash.jpg"; // Import your background image
+import backgroundImage from "/mymind-XUlsF9LYeVk-unsplash.jpg"; // Import your background image
 
 import "./App.css";
 import Navbar from "./components/Navbar";
@@ -55,7 +55,7 @@ const LandingPage = () => {
   return (
     <div
       style={{
-        // backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url('../public/mymind-XUlsF9LYeVk-unsplash.jpg')`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
