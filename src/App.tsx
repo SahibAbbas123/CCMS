@@ -9,6 +9,8 @@ import Intro from "./components/Intro";
 import CourseList, { Course } from "./components/CourseList";
 import About from "./components/About";
 import LandingPage from "./LandingPage";
+import SignUpPage from "./components/SignupPage";
+
 // import CourseDetails from "./components/CourseDetails";
 
 // const courses: Course[] = [
@@ -48,7 +50,7 @@ function App() {
         fontFamily: "Poppins, sans-serif", // Apply font family if needed
       }}
     >
-      <LandingPage/>
+      <SignUpPage></SignUpPage>
     </div>
   );
 }

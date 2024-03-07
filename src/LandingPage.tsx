@@ -1,12 +1,14 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
+
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import { useState } from "react";
 
-import backgroundImage from "./images/mymind-XUlsF9LYeVk-unsplash.jpg"; // Import your background image
+// import backgroundImage from "./images/mymind-XUlsF9LYeVk-unsplash.jpg"; // Import your background image
+
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
@@ -53,7 +55,7 @@ const LandingPage = () => {
   return (
     <div
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        // backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
