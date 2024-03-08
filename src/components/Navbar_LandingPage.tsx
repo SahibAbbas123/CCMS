@@ -1,8 +1,3 @@
-//Navbar.tsx
-
-//DEPRECATED - DO NOT USE THIS FILE ANYMORE!!!
-//DON'T DELETE UNLESS YOU'RE REALLY SURE!!!
-
 import React from "react";
 import { Link } from "react-router-dom";
 

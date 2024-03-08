@@ -1,6 +1,22 @@
+/*
+ * TIME: 0906hrs, 8th March 2024 
+ * THIS CODE IS SOMEWHAT BROKEN
+ * SO I AM USING THE TEMP VERSION OF IT FOR THE MOMENT
+ * I WILL COME BACK TO THIS CODE ONLY IF ITS RECTIFIED
+ */
+
+
+
+
 import React, { useState } from "react";
 
+// Define a dummy array to store new accounts
+const dummyAccounts: any[] = []; // Array of any type to store account data
+
 const SignUpPage: React.FC = () => {
+
+
+  
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -20,7 +36,9 @@ const SignUpPage: React.FC = () => {
     designation: "",
   });
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = event.target;
     setFormData({
       ...formData,
@@ -39,7 +57,7 @@ const SignUpPage: React.FC = () => {
     event.preventDefault();
 
     // Form validation
-    const errors: { [key: string]: string } = {};
+    const errors: any = {}; // Object type to store form errors
     if (!formData.firstName.trim()) {
       errors.firstName = "First name is required";
     }
@@ -63,6 +81,8 @@ const SignUpPage: React.FC = () => {
 
     // If there are no errors, proceed with form submission
     if (Object.keys(errors).length === 0) {
+      // Add new account to dummy array
+      dummyAccounts.push(formData);
       // Perform form submission logic here
       console.log("Form submitted with data:", formData);
       // Reset form fields after submission
@@ -81,7 +101,7 @@ const SignUpPage: React.FC = () => {
   return (
     <div className="container-fluid d-flex justify-content-center align-items-center vh-100">
       <div
-        className="container mt-5"
+        className="container "
         style={{
           backgroundImage: `url('../../public/mymind-XUlsF9LYeVk-unsplash.jpg')`,
           backgroundSize: "cover",
@@ -96,8 +116,11 @@ const SignUpPage: React.FC = () => {
             <div className="card">
               <div className="card-body">
                 <h2 className="text-center mb-4">Sign Up</h2>
+                {/* <form onSubmit={handleSubmit}> */}
+                {/* Form fields go here */}
+                {/* </form> */}
                 <form onSubmit={handleSubmit}>
-                  <div className="form-group mb-3">
+                  <div className="mb-3">
                     <label>First Name</label>
                     <input
                       type="text"
@@ -115,7 +138,7 @@ const SignUpPage: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="form-group mb-3">
+                  <div className="mb-3">
                     <label>Last Name</label>
                     <input
                       type="text"
@@ -133,7 +156,7 @@ const SignUpPage: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="form-group mb-3">
+                  <div className="mb-3">
                     <label>Email</label>
                     <input
                       type="email"
@@ -149,7 +172,7 @@ const SignUpPage: React.FC = () => {
                     <div className="invalid-feedback">{formErrors.email}</div>
                   </div>
 
-                  <div className="form-group mb-3">
+                  <div className="mb-3">
                     <label>Password</label>
                     <input
                       type="password"
@@ -168,8 +191,8 @@ const SignUpPage: React.FC = () => {
                   </div>
 
                   {formData.role === "teacher" && (
-                    <div>
-                      <div className="form-group mb-3">
+                    <>
+                      <div className="mb-3">
                         <label>Phone Number:</label>
                         <input
                           type="text"
@@ -186,7 +209,7 @@ const SignUpPage: React.FC = () => {
                           {formErrors.phone}
                         </div>
                       </div>
-                      <div className="form-group mb-3">
+                      <div className="mb-3">
                         <label>Designation:</label>
                         <select
                           className={`form-control ${
@@ -208,10 +231,10 @@ const SignUpPage: React.FC = () => {
                           {formErrors.designation}
                         </div>
                       </div>
-                    </div>
+                    </>
                   )}
 
-                  <div className="form-group mb-3">
+                  <div className="mb-3">
                     <label className="mr-2">Role:</label>
                     <div className="form-check form-check-inline">
                       <input
@@ -251,5 +274,6 @@ const SignUpPage: React.FC = () => {
     </div>
   );
 };
+console.log(dummyAccounts);
 
 export default SignUpPage;

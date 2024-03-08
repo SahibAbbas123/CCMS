@@ -12,12 +12,11 @@ import backgroundImage from "/mymind-XUlsF9LYeVk-unsplash.jpg"; // Import your b
 import "./App.css";
 // import Navbar from "./components/Navbar";
 // import CourseDetails from "./components/CourseDetails";
-// import CourseList_Teacher from "./components/CourseList_Teacher";
 import Intro from "./components/Intro";
 import CourseList, { Course } from "./components/CourseList";
 import About from "./components/About";
-import Navbar_LandingPage from "./components/Navbar_LandingPage";
-
+import CourseList_Teacher from "./components/CourseList_Teacher";
+import Navbar_Teacher from "./components/Navbar_Teacher";
 
 
 export const courses: Course[] = [
@@ -29,6 +28,10 @@ export const courses: Course[] = [
   { id: 6, name: "HTML", level: "Beginner", category: "Offered", description:'lorem ipsum', duration:'2 months', prerequisites: 'none', instructor: 'Nowshed Sir', certification:'Yes' },
   { id: 7, name: "Express.js", level: "Advanced", category: "Upcoming", description:'lorem ipsum', duration:'2 months', prerequisites: 'none', instructor: 'Nowshed Sir', certification:'Yes' },
   { id: 8, name: "Bootstrap", level: "Intermediate", category: "Upcoming", description:'lorem ipsum', duration:'2 months', prerequisites: 'none', instructor: 'Nowshed Sir', certification:'Yes' },
+  { id: 5, name: "Laravel", level: "Intermediate", category: "Assigned", description:'lorem ipsum', duration:'2 months', prerequisites: 'none', instructor: 'Nowshed Sir', certification:'Yes' },
+  { id: 6, name: "HTML", level: "Beginner", category: "Assigned", description:'lorem ipsum', duration:'2 months', prerequisites: 'none', instructor: 'Nowshed Sir', certification:'Yes' },
+  { id: 7, name: "Express.js", level: "Advanced", category: "Assigned", description:'lorem ipsum', duration:'2 months', prerequisites: 'none', instructor: 'Nowshed Sir', certification:'Yes' },
+  { id: 8, name: "Bootstrap", level: "Intermediate", category: "Assigned", description:'lorem ipsum', duration:'2 months', prerequisites: 'none', instructor: 'Nowshed Sir', certification:'Yes' },
 ];
 const course = {
   id: 1,
@@ -66,9 +69,9 @@ const LandingPage = () => {
         fontFamily: "Poppins, sans-serif", // Apply font family if needed
       }}
     >
-      <Navbar_LandingPage></Navbar_LandingPage>
+      <Navbar_Teacher></Navbar_Teacher>
       <Intro></Intro>
-      <CourseList courses={courses}></CourseList>
+      <CourseList_Teacher courses={courses}></CourseList_Teacher>
       <About></About>
     </div>
   );

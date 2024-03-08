@@ -1,12 +1,7 @@
-//Navbar.tsx
-
-//DEPRECATED - DO NOT USE THIS FILE ANYMORE!!!
-//DON'T DELETE UNLESS YOU'RE REALLY SURE!!!
-
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar_Student = () => {
   return (
     <>
       <nav
@@ -20,14 +15,14 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <Link className="nav-link " to="/login">
-                  Login
+                <Link className="nav-link " to="/student_dashboard">
+                  Profile
                 </Link>
               </li>
               <li className="nav-item">
                 {/* <a className="nav-link " href="#"> */}
-                <Link className="nav-link" to="/signup">
-                  Sign Up
+                <Link className="nav-link" to="/">
+                  Logout
                 </Link>
               </li>
             </ul>
@@ -38,4 +33,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar_Student;

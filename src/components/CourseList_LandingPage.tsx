@@ -1,9 +1,5 @@
-//CourseList.tsx 
-
-//DEPRECATED - DO NOT USE THIS FILE ANYMORE!!!
-//DON'T DELETE UNLESS YOU'RE REALLY SURE!!!
-
-
+//CourseList.tsx --deprecated
+//do not use this anymore
 import React from "react";
 
 export interface Course {

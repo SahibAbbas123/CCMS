@@ -7,17 +7,17 @@ import {
 } from "react-router-dom";
 import { useState } from "react";
 
-import backgroundImage from "/mymind-XUlsF9LYeVk-unsplash.jpg"; // Import your background image
+// import backgroundImage from "/mymind-XUlsF9LYeVk-unsplash.jpg"; // Import your background image
 
 import "./App.css";
 // import Navbar from "./components/Navbar";
 // import CourseDetails from "./components/CourseDetails";
+// import CourseList, { Course } from "./components/CourseList";
 // import CourseList_Teacher from "./components/CourseList_Teacher";
 import Intro from "./components/Intro";
-import CourseList, { Course } from "./components/CourseList";
+import Navbar_Student from "./components/Navbar_Student";
+import CourseList_Student, { Course } from "./components/CourseList_Student";
 import About from "./components/About";
-import Navbar_LandingPage from "./components/Navbar_LandingPage";
-
 
 
 export const courses: Course[] = [
@@ -29,6 +29,10 @@ export const courses: Course[] = [
   { id: 6, name: "HTML", level: "Beginner", category: "Offered", description:'lorem ipsum', duration:'2 months', prerequisites: 'none', instructor: 'Nowshed Sir', certification:'Yes' },
   { id: 7, name: "Express.js", level: "Advanced", category: "Upcoming", description:'lorem ipsum', duration:'2 months', prerequisites: 'none', instructor: 'Nowshed Sir', certification:'Yes' },
   { id: 8, name: "Bootstrap", level: "Intermediate", category: "Upcoming", description:'lorem ipsum', duration:'2 months', prerequisites: 'none', instructor: 'Nowshed Sir', certification:'Yes' },
+  { id: 5, name: "Laravel", level: "Intermediate", category: "Enrolled", description:'lorem ipsum', duration:'2 months', prerequisites: 'none', instructor: 'Nowshed Sir', certification:'Yes' },
+  { id: 6, name: "HTML", level: "Beginner", category: "Enrolled", description:'lorem ipsum', duration:'2 months', prerequisites: 'none', instructor: 'Nowshed Sir', certification:'Yes' },
+  { id: 7, name: "Express.js", level: "Advanced", category: "Enrolled", description:'lorem ipsum', duration:'2 months', prerequisites: 'none', instructor: 'Nowshed Sir', certification:'Yes' },
+  { id: 8, name: "Bootstrap", level: "Intermediate", category: "Enrolled", description:'lorem ipsum', duration:'2 months', prerequisites: 'none', instructor: 'Nowshed Sir', certification:'Yes' },
 ];
 const course = {
   id: 1,
@@ -66,9 +70,9 @@ const LandingPage = () => {
         fontFamily: "Poppins, sans-serif", // Apply font family if needed
       }}
     >
-      <Navbar_LandingPage></Navbar_LandingPage>
+      <Navbar_Student></Navbar_Student>
       <Intro></Intro>
-      <CourseList courses={courses}></CourseList>
+      <CourseList_Student courses={courses}></CourseList_Student>
       <About></About>
     </div>
   );
