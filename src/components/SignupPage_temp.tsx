@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUpPage: React.FC = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -232,12 +234,18 @@ const SignUpPage: React.FC = () => {
           </div>
 
           <div className="form-group">
-            <button type="submit" className="btn btn-primary btn-block">
+            <button type="submit" className="btn btn-primary btn-block me-3">
               Sign Up
             </button>
-            <Link className="nav-link mt-2" to="/">
+            {/* <Link className="nav-link mt-2" to="/">
               Back
-            </Link>
+            </Link> */}
+            <button
+              className="btn btn-outline-primary"
+              onClick={() => navigate(-1)}
+            >
+              Back
+            </button>
           </div>
         </form>
       </div>

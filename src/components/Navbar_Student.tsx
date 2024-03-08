@@ -1,7 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar_Student = () => {
+  const navigate = useNavigate();
+
+  // Define a function to handle the logout click
+  const handleLogout = (event: { preventDefault: () => void }) => {
+    // Show a confirmation dialog with a message
+    const reallyLogout = confirm("Do you really want to log out?");
+    // If the user clicks OK, navigate to the logout page
+    if (reallyLogout) {
+      navigate("/");
+    }
+    // Otherwise, do nothing and stay on the same page
+    else {
+      event.preventDefault();
+    }
+  };
   return (
     <>
       <nav
@@ -9,7 +24,7 @@ const Navbar_Student = () => {
         style={{ fontFamily: "Poppins, sans-serif" }}
       >
         <div className="container-fluid">
-          <a className="navbar-brand " href="#">
+          <a className="navbar-brand " href="/student">
             <strong>CCMS</strong>
           </a>
           <div className="collapse navbar-collapse" id="navbarNav">
@@ -21,7 +36,7 @@ const Navbar_Student = () => {
               </li>
               <li className="nav-item">
                 {/* <a className="nav-link " href="#"> */}
-                <Link className="nav-link" to="/">
+                <Link className="nav-link" to="/" onClick={handleLogout}>
                   Logout
                 </Link>
               </li>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface TeacherInfo {
   name: string;
@@ -11,6 +11,7 @@ interface TeacherInfo {
 }
 
 const Teacher_Dashboard: React.FC = () => {
+  const navigate = useNavigate();
   const [teacherInfo, setTeacherInfo] = useState<TeacherInfo>({
     name: "John Doe",
     email: "johndoe@example.com",
@@ -203,7 +204,7 @@ const Teacher_Dashboard: React.FC = () => {
                 </div>
               </div>
               <div style={{ textAlign: "center" }}>
-                <button
+                {/* <button
                   type="button"
                   onClick={saveChanges}
                   style={{
@@ -217,8 +218,15 @@ const Teacher_Dashboard: React.FC = () => {
                   }}
                 >
                   Save
-                </button>
+                </button> */}
                 <button
+                  onClick={saveChanges}
+                  type="submit"
+                  className="btn btn-primary btn-block me-3"
+                >
+                  Save
+                </button>
+                {/* <button
                   type="button"
                   onClick={cancelEditMode}
                   style={{
@@ -229,6 +237,13 @@ const Teacher_Dashboard: React.FC = () => {
                     borderRadius: "5px",
                     cursor: "pointer",
                   }}
+                >
+                  Cancel
+                </button> */}
+                <button
+                  onClick={cancelEditMode}
+                  type="submit"
+                  className="btn btn-outline-primary btn-block me-3"
                 >
                   Cancel
                 </button>
@@ -252,7 +267,7 @@ const Teacher_Dashboard: React.FC = () => {
                 <strong>Password:</strong> ********
               </div>
               <div style={{ textAlign: "center" }}>
-                <button
+                {/* <button
                   onClick={startEditMode}
                   style={{
                     padding: "10px 20px",
@@ -264,8 +279,21 @@ const Teacher_Dashboard: React.FC = () => {
                   }}
                 >
                   Edit
+                </button> */}
+                <button
+                  onClick={startEditMode}
+                  type="submit"
+                  className="btn btn-primary btn-block me-3"
+                >
+                  Edit
                 </button>
-                <Link  className="nav-link mt-2" to="/teacher">Back</Link>
+                {/* <Link  className="nav-link mt-2" to="/teacher">Back</Link> */}
+                <button
+                  className="btn btn-outline-primary"
+                  onClick={() => navigate(-1)}
+                >
+                  Go Back
+                </button>
               </div>
             </div>
           )}

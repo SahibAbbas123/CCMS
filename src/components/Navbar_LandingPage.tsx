@@ -9,7 +9,7 @@ const Navbar = () => {
         style={{ fontFamily: "Poppins, sans-serif" }}
       >
         <div className="container-fluid">
-          <a className="navbar-brand " href="#">
+          <a className="navbar-brand " href="/">
             <strong>CCMS</strong>
           </a>
           <div className="collapse navbar-collapse" id="navbarNav">
