@@ -1,0 +1,28 @@
+Refactored from scratch. Current situation:
+
+
+baki ase:
+1. navbar (dynamic krte hbe. ekhono static. mane signup login button dekhacche. sign in korle profile ar logout dekhaite hbe.)
+
+2. courselist gulo database thk ashbe. tai ekhn khali dekhabe frontend run krle backend ar database connect na krle. ami cheshta krsi k logged in ase shei shapekkhe list gulo show koranor. kaj ta dummy logic diye kora hoise. mane ekta variable true ba false hoile omuk column dekhabe/dekhabe na. dummy logic diye na kore userId fetch kore trpr column show koranor bebostha krte hbe
+
+3. profile(for student and teacher both) banaite hbe
+        
+4. teacher dashboard (mane assigned courses list, upcoming courses list, offered courses list. 2no point er issue ta resolve krle eta krte ar beshikkhon lagar kotha na                  
+                      
+5. admin dashboard 
+        
+6. admin e unassigned courses er upor teacher assign button + its functionality
+(actually admin puratai baki)
+
+7. course details page. ami signed out thakle enroll now button dekhabe jeta signup e redirect krbe. student hishebe signed in thakle direct enroll hoye jabe. ar teacher e enroll now thakbei na
+
+8. teacher jkhn course e click dibe tkhn details dekhar pashapashi attendance dite parte hbe, nahole koy session nise, kto taka pabe hishab kora jacche na
+                      
+9. student jkhn course e click dibe tkhn details dekhabe, enroll now button e dile oi course enrolled courses list e chole jabe. ekta alert ashbe 'enrolled'. erpr chaile ekta feature dewa jay. enroll now dewar por darai thakbe na. direct abaro dashboard e chole jabe
+
+issues:
+1. signup/login kaj krtese na. console e prochur lal batti
+2 ./student-dashboard ei route e gele shb thik mto load hoy kintu /student-dashboard/:{konoEktaUserId} te gele shudhu background image chara shb load hoy. ami maybe img baad diye disilam. but last jkhn disilam kaj krtesilo na
+3. semi transparent navbar krte chacchi hcche na
+4. navbar er upr halka faaka jaayga dekha jacche for unknown reason
